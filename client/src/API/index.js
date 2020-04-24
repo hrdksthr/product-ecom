@@ -1,10 +1,10 @@
-import { serverLink } from "../utils/environment";
+import { serverLink } from '../utils/environment'
 
 class Service {
     get(url) {
         const headers = {
             'Content-Type': 'application/json; charset=utf-8'
-        };
+        }
         if(localStorage.getItem('token')) {
             headers.authorization = `Bearer ${localStorage.getItem('token')}`
         }
@@ -20,7 +20,7 @@ class Service {
     post(url = '', data = {}) {
         const headers = {
             'Content-Type': 'application/json; charset=utf-8'
-        };
+        }
         if(localStorage.getItem('token')) {
             headers.authorization = `Bearer ${localStorage.getItem('token')}`
         }

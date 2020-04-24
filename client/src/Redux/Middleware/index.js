@@ -12,10 +12,10 @@ const promiseMiddleware = () => {
     return promise
       .then(async response => {
           if(response.status.toString().indexOf('20') === 0) {
-            const newResp = await response.json();
+            const newResp = await response.json()
             return { ...newResp, status: response.status }
         }
-        const newResp = await response.json();
+        const newResp = await response.json()
         return Promise.reject({ ...newResp, status: response.status })
         })
       .then(response => {
@@ -31,15 +31,15 @@ const promiseMiddleware = () => {
             secure
           )
         }
-        return Promise.resolve(response);
+        return Promise.resolve(response)
       })
       .catch(error => {
-          console.log("error",error)
+          console.log('error',error)
         next({ ...rest, error, type: FAILURE })
         if (error.status && error.status.code === 401) {
           cookies.remove('API_TOKEN')
         }
-        return Promise.reject(error);
+        return Promise.reject(error)
       })
   }
 }

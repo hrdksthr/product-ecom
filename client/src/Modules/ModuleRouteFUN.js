@@ -1,7 +1,7 @@
 class ModuleRouteFun {
     constructor(props) {
-        this.props = props;
-        console.log("props",props)
+        this.props = props
+        console.log('props',props)
         this.state = {
             login: props.login,
             mainUserData: props.mainUserData,
@@ -10,16 +10,16 @@ class ModuleRouteFun {
     }
     
     getBaseData = async () => {
-        if(localStorage.getItem("email")) {
+        if(localStorage.getItem('email')) {
             await this.props.mainUserInfo({
-                email: localStorage.getItem("email")
+                email: localStorage.getItem('email')
             })
             await this.props.productList()
         }
     }
 
     handleLogout = () => {
-        localStorage.clear();
+        localStorage.clear()
         this.props.history.push('/login')
     } 
 }

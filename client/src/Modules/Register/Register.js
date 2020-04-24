@@ -2,7 +2,7 @@ import React from 'react'
 import presenter from '../../HOC/presenter'
 import { Col, Row, Form, Icon, Input, Button } from 'antd'
 import * as Actions from '../../Redux/Actions/register'
-import "./Register.css"
+import './Register.css'
 import registerPM from './RegisterPM'
 import { Link } from 'react-router-dom'
 const FormItem = Form.Item
@@ -56,7 +56,7 @@ const Register = props => {
             },
             {
               type: 'email',
-              message: "please enter proper email"
+              message: 'please enter proper email'
             }
           ]
         })(

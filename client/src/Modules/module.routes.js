@@ -1,8 +1,8 @@
 import React from 'react'
 import { Layout, Icon, Button, Row, Col, Badge } from 'antd'
 import { Route, Switch, Redirect, Link } from 'react-router-dom'
-import * as Actions from './../Redux/Actions/MainRoute';
-import * as ProductAction from './../Redux/Actions/Products';
+import * as Actions from './../Redux/Actions/MainRoute'
+import * as ProductAction from './../Redux/Actions/Products'
 
 import asyncComponent from '../HOC/asyncRender'
 import presenter from '../HOC/presenter'
@@ -39,7 +39,7 @@ class ModuleRoutes extends React.Component {
                     getBaseData
                 }
             }
-        } = this;
+        } = this
         getBaseData()
     }
 
@@ -54,7 +54,7 @@ class ModuleRoutes extends React.Component {
                 },
                 handleLogout
             }
-        } } = this;
+        } } = this
         return (
             <Layout style={{ minHeight: '100vh' }}>
                 <Layout>
@@ -77,7 +77,7 @@ class ModuleRoutes extends React.Component {
                             </Col>
                         </Row>
                     </Header>
-                    <Content style={{ margin: '0 16px', height: "90vh", overflowY: "scroll" }}>
+                    <Content style={{ margin: '0 16px', height: '90vh', overflowY: 'scroll' }}>
                         <ContentRoute />
                     </Content>
                 </Layout>

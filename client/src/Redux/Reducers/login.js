@@ -2,7 +2,7 @@ import {
     POST_LOGIN_FAILURE,
     POST_LOGIN_SUCCESS,
     POST_LOGIN_REQUEST,
-} from './../Constants/login';
+} from './../Constants/login'
 
 const initilState = {
     isLoggedIn: false,

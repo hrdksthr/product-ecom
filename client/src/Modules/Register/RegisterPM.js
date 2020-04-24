@@ -1,8 +1,8 @@
-import { message } from "antd";
+import { message } from 'antd'
 
 class RegisterPM {
   constructor(props) {
-    this.props = props;
+    this.props = props
   }
   handleSubmit = e => {
     e.preventDefault()

@@ -2,13 +2,13 @@ import React from 'react'
 import presenter from './../../HOC/presenter'
 import { Form, Icon, Input, Button } from 'antd'
 import * as Actions from './../../Redux/Actions/login'
-import "./Login.css"
+import './Login.css'
 import loginFUN from './LoginFUN'
 import { Link } from 'react-router-dom'
 const FormItem = Form.Item
 
 const Login = props => {
-  const { getFieldDecorator } = props.form;
+  const { getFieldDecorator } = props.form
   return (
     <Form onSubmit={props.pm.handleSubmit} className="login-form">
       <FormItem>

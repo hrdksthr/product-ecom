@@ -2,13 +2,13 @@ import {
     POST_MAIN_DATA_FAILURE,
     POST_MAIN_DATA_SUCCESS,
     POST_MAIN_DATA_REQUEST,
-} from '../Constants/MainRoute';
+} from '../Constants/MainRoute'
 
 import {
     ADD_CART_DATA_FAILURE,
     ADD_CART_DATA_SUCCESS,
     ADD_CART_DATA_REQUEST,
-} from '../Constants/User-Product';
+} from '../Constants/User-Product'
 
 const initilState = {
     isFetching: false,
@@ -29,12 +29,12 @@ export default function mainUserInfo(
         case POST_MAIN_DATA_REQUEST:
             return { ...state, isFetching: true }
         case POST_MAIN_DATA_SUCCESS:
-            const obj = {};
-            let price = 0;
-            let count = 0;
+            const obj = {}
+            let price = 0
+            let count = 0
             action.response.userProducts.map(item => {
-                obj[item.id] = item.count;
-                if(item.price && typeof item.price === "number" && item.price !== "NaN") {
+                obj[item.id] = item.count
+                if(item.price && typeof item.price === 'number' && item.price !== 'NaN') {
                     price = Number(Number(Number(price).toFixed(2)) + Number(Number(item.price).toFixed(2))) * item.count
                 }
                 count = Number(count) + Number(item.count)
@@ -63,7 +63,7 @@ export function addToCard(
         case ADD_CART_DATA_REQUEST:
             return { ...state, isFetching: true }
         case ADD_CART_DATA_SUCCESS:
-            console.log("state", state)
+            console.log('state', state)
             return {
                 ...state,
                 isFetching: false
